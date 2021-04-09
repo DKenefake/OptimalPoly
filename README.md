@@ -3,7 +3,7 @@ Stable implementation of the Remez Algorithm using multi-precision arithmetic. A
 
 ## Example of use
 
-This is all that is needed to create a 4th order optimal polynomial approximation of e^x on [-1,1].
+This is all that is needed to create a 4th order optimal polynomial approximation of e^x on [0,1].
 
 ```python
 function = lambda x: mp.exp(x)
