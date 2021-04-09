@@ -2,7 +2,7 @@
 Stable implementation of the Remez Algorithm using multi-precision arithmetic.
 
  
-# Example of use
+## Example of use
 
 This is all that is needed to create a 4th order optimal polynomial approximation of e^x on [-1,1].
 
@@ -39,7 +39,7 @@ plt.title('$f(x) - P^*_{4}(x)$')
 
 ![image](https://github.com/DKenefake/OptimalPoly/blob/main/assets/Equioscillation.png)
 
-# Dependancies
+## Dependancies
 
 * numpy
 * mpmath
