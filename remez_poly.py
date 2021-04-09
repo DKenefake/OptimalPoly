@@ -139,7 +139,7 @@ def c_code_gen(data_type, name, poly_coeffs, comments = None):
     
     data_type_converter = '' if data_type == 'double' else 'f'
     
-    method_string += '\n'.join([f'\t{data_type} a_{i} = {str(val) + data_type_converter};' for i, val in enumerate(poly_coeffs)])
+    method_string += '\n'.join([f'\tconst {data_type} a_{i} = {str(val) + data_type_converter};' for i, val in enumerate(poly_coeffs)])
     
     horner = 'return a_0+'
     for i in range(len(poly_coeffs)-2):
