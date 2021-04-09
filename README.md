@@ -22,7 +22,9 @@ plt.plot(x, y_exact)
 plt.plot(x, y_approx, 'x')
 plt.title(r'$f(x)$ v. $P^*_{4}(x)$')
 ```
-<img src="https://github.com/DKenefake/OptimalPoly/blob/main/assets/compare.png" width="100">
+<p align = "center">
+<img src="https://github.com/DKenefake/OptimalPoly/blob/main/assets/compare.png" width="50%" class="center">
+</p>
 
 And we can also look at the distinctive equioscillation of the optimal polynomial result with the following.
 
@@ -35,8 +37,9 @@ y_approx = numpy.array([function(x_i) for x_i in x])
 plt.plot(x, y_exact - y_approx)
 plt.title('$f(x) - P^*_{4}(x)$')
 ```
-
-![image](https://github.com/DKenefake/OptimalPoly/blob/main/assets/Equioscillation.png)
+<p align = "center">
+<img src="https://github.com/DKenefake/OptimalPoly/blob/main/assets/Equioscillation.png" width="50%" class="center">
+</p>
 
 To generate the C code, you need to specify the data type of either `float` or `double`. This uses horner's method to speed up the polynomial evaluation, and depending on the compiler flags used, this should compile to 4 `fmad` operations. 
 
