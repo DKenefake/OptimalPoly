@@ -41,7 +41,7 @@ plt.title('$f(x) - P^*_{4}(x)$')
 To generate the C code, you need to specify the data type of either `float` or `double`. This uses horner's method to speed up the polynomial evaluation, and depending on the compiler flags used, this should compile to 4 `fmad` operations. 
 
 ```python
-c_code_gen(data_type = 'float', name = 'exp_approx', poly_coeffs, comments = f'x in [0, 1]')
+c_code_gen(data_type = 'float', name = 'exp_approx', poly_coeffs = poly_coeffs, comments = f'x in [0, 1]')
 ```
 
 ```C
