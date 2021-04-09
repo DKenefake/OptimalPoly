@@ -22,7 +22,7 @@ plt.plot(x, y_exact)
 plt.plot(x, y_approx, 'x')
 plt.title(r'$f(x)$ v. $P^*_{4}(x)$')
 ```
-![image](https://github.com/DKenefake/OptimalPoly/blob/main/assets/compare.png)
+![image](https://github.com/DKenefake/OptimalPoly/blob/main/assets/compare.png | width=100)
 
 And we can also look at the distinctive equioscillation of the optimal polynomial result with the following.
 
