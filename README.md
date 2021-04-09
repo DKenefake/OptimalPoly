@@ -1,17 +1,17 @@
 # OptimalPoly
-Stable implementation of the Remez Algorithm using multiprecision arithmetic.
+Stable implementation of the Remez Algorithm using multi-precision arithmetic.
 
-
+ 
 # Example of use
 
-This is all that is needed to create a 4th order optimal polynomial approximation of e^x on [-1,1]
+This is all that is needed to create a 4th order optimal polynomial approximation of e^x on [-1,1].
 
 ```python
 function = lambda x: mp.exp(x)
 poly_coeffs, max_error = remez(f, 4, 0, 1)
 ```
 
-We can inspect how well we approximated it visually with the following code snippit. 
+We can inspect how well we approximated it visually with the following code snippet.  
 
 ```python
 import matplotlib.pyplot as plt
@@ -25,8 +25,7 @@ plt.title(r'$f(x)$ v. $P^*_{4}(x)$')
 ```
 ![image](https://github.com/DKenefake/OptimalPoly/blob/main/assets/compare.png)
 
-
-And we can also look at the distinctive equiocillation of the optimal polynomail result with the following.
+And we can also look at the distinctive equioscillation of the optimal polynomial result with the following.
 
 ```python
 import matplotlib.pyplot as plt
