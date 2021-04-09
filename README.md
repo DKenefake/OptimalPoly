@@ -51,11 +51,11 @@ c_code_gen(data_type = 'float', name = 'exp_approx', poly_coeffs = poly_coeffs, 
 float exp_approx (float x){
 	// x in [0, 1] 
 
-	float a_0 = 1.0000271624188655f;
-	float a_1 = 0.9986854006378604f;
-	float a_2 = 0.510139460205787f;
-	float a_3 = 0.13969814854689722f;
-	float a_4 = 0.0697044942307694f;
+	const float a_0 = 1.0000271624188655f;
+	const float a_1 = 0.9986854006378604f;
+	const float a_2 = 0.510139460205787f;
+	const float a_3 = 0.13969814854689722f;
+	const float a_4 = 0.0697044942307694f;
  	return a_0+x*(a_1 +x*(a_2 +x*(a_3 +x*a_4)));
 }
 ```
