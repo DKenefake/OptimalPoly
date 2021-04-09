@@ -130,3 +130,20 @@ def remez(func, n_degree:int, lower:float=-1, upper:float=1, max_iter:int = 10):
         x_points = extremums
 
     return [float(i) for i in numpy.polynomial.chebyshev.cheb2poly(coeffs)], float(mean_error)
+
+def c_code_gen(data_type, name, poly_coeffs, comments = None):
+    method_string = f'{data_type} {name} ({data_type} x)' + '{\n'
+    
+    if comments is not None:
+        method_string += '\t// ' + str(comments) + ' \n\n'
+    
+    data_type_converter = '' if data_type == 'double' else 'f'
+    
+    method_string += '\n'.join([f'\t{data_type} a_{i} = {str(val) + data_type_converter};' for i, val in enumerate(poly_coeffs)])
+    
+    horner = 'return a_0+'
+    for i in range(len(poly_coeffs)-2):
+        horner += f'x*(a_{i+1} +' 
+    horner += f'x*a_{len(poly_coeffs)-1}' + ')'*(len(poly_coeffs)-2) + ';\n}'
+    
+    return method_string + '\n \t' + horner
