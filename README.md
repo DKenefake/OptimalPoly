@@ -1,5 +1,5 @@
 # OptimalPoly
-Stable implementation of the Remez Algorithm using multi-precision arithmetic. Also does C/C++ code generation!
+Generates MinMax polynomial approximations of functions. Stable implementation of the Remez Algorithm using multi-precision arithmetic. Also does C/C++ code generation!
 
 ## Example of use
 
