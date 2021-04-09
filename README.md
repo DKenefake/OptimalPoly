@@ -57,7 +57,7 @@ float exp_approx (float x){
 }
 ```
 
-## Dependancies
+## Dependencies
 
 * numpy
 * mpmath
