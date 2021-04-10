@@ -16,8 +16,8 @@ We can inspect how well we approximated it visually with the following code snip
 import matplotlib.pyplot as plt
 x = numpy.linspace(0, 1, 50)
 
-y_exact = numpy.polyval(poly_coeffs[::-1], x)
-y_approx = numpy.array([function(x_i) for x_i in x])
+y_approx = numpy.polyval(poly_coeffs[::-1], x)
+y_exact = numpy.array([function(x_i) for x_i in x])y_exact
 plt.plot(x, y_exact)
 plt.plot(x, y_approx, 'x')
 plt.title(r'$f(x)$ v. $P^*_{4}(x)$')
@@ -32,8 +32,8 @@ And we can also look at the distinctive equioscillation of the optimal polynomia
 import matplotlib.pyplot as plt
 x = numpy.linspace(0, 1, 500)
 
-y_exact = numpy.polyval(poly_coeffs[::-1], x)
-y_approx = numpy.array([function(x_i) for x_i in x])
+y_approx = numpy.polyval(poly_coeffs[::-1], x)
+y_exact = numpy.array([function(x_i) for x_i in x])
 plt.plot(x, y_exact - y_approx)
 plt.title('$f(x) - P^*_{4}(x)$')
 ```
