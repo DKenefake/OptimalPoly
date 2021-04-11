@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 x = numpy.linspace(0, 1, 50)
 
 y_approx = numpy.polyval(poly_coeffs[::-1], x)
-y_exact = numpy.array([function(x_i) for x_i in x])y_exact
+y_exact = numpy.array([function(x_i) for x_i in x])
 plt.plot(x, y_exact)
 plt.plot(x, y_approx, 'x')
 plt.title(r'$f(x)$ v. $P^*_{4}(x)$')
